@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Regular.eot");
+  src: url("assets/fonts/Poppins-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("assets/fonts/Poppins-Regular.ttf") format("truetype"),
+    url("assets/fonts/Poppins-Regular.svg#Poppins-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE Canvas";
+  src: url("/assets\fonts\MADECanvas-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE Canvas";
+  src: url("/assets/fonts/MADECanvas-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE Canvas";
+  src: url("/assets/fonts/MADECanvas.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.holder {
+  @apply mx-auto max-w-sitWidth px-6 sm:px-8 lg:px-16;
+}
+
+body {
+  @apply font-poppins;
+}
+
+.btn {
+  @apply bg-white border border-black dark:border-white py-4 px-6 inline-flex items-center gap-6 uppercase text-sm font-normal tracking-[0.035rem] leading-none hover:text-white hover:bg-black transition-all duration-500 dark:text-white dark:bg-black;
+}
+
+.btn:hover > svg > path {
+  @apply fill-white transition-all duration-500;
+}
+
+.translate_none {
+  @apply translate-x-0;
+}
+
+.translate_full {
+  @apply -translate-x-full;
+}
+@layer base {
+  p {
+    @apply text-lg font-normal leading-[166.667%];
+  }
+
+  .block-pad {
+    @apply lg:py-12 py-8;
+  }
+
+  h2 {
+    @apply text-7xl font-semibold leading-[166.667%];
+  }
+
+  h3 {
+    @apply text-5xl md:text-8xl lg:text-[130px] font-bold capitalize leading-none;
+  }
+
+  .link_hover {
+    @apply hover:text-red-400 hover:duration-500 transition-all;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main--menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    z-index: 99;
+    padding: 60px;
+    text-align: center;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.toggleNav i {
+  @apply transition-all duration-500 ease-in-out;
+}
+.toggleNav i:nth-child(1) {
+  @apply translate-x-[13px];
+}
+body.nav-expanded .toggleNav i:nth-child(1) {
+  @apply rotate-[225deg] top-[9px] w-full translate-x-0;
+}
+
+body.nav-expanded .toggleNav i:nth-child(2) {
+  @apply opacity-0;
+}
+
+body.nav-expanded .toggleNav i:nth-child(3) {
+  @apply -rotate-[225deg] -top-[7px] w-full;
+}
+body.nav-expanded aside {
+  @apply left-0;
+}
+section {
+  @apply transition-all duration-500;
+}
+
+body.nav-expanded section {
+  @apply md:ml-[360px] overflow-hidden;
+}
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #576665;
+}
+
+.dot {
+  @apply bg-oliveLight;
+}
