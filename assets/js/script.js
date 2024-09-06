@@ -11,3 +11,10 @@ function darkModeListener() {
 document
   .querySelector("input[type='checkbox']#dark-toggle")
   .addEventListener("click", darkModeListener);
+
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
