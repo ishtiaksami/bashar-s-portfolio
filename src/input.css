@@ -62,6 +62,11 @@ body {
 .translate_full {
   @apply -translate-x-full;
 }
+
+.bg_img {
+  @apply bg-cover bg-no-repeat bg-center bg-primary;
+}
+
 @layer base {
   p {
     @apply text-lg font-normal leading-[166.667%];
@@ -139,10 +144,11 @@ input:checked ~ .dot {
 }
 
 .ani {
+  border-right: 2px solid;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 2s steps(18), cursor 0.5s step-end infinite alternate;
+  animation: typing 2s steps(30), cursor 0.5s step-end infinite alternate;
 }
 
 @keyframes cursor {

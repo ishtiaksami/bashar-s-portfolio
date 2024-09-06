@@ -4,6 +4,9 @@ module.exports = {
   content: ["./**/*.html"],
   theme: {
     extend: {
+      backgroundImage: {
+        primary: "url('./assets/img/Rectangle1.svg')",
+      },
       maxWidth: {
         sitWidth: "1496px",
       },
@@ -19,6 +22,7 @@ module.exports = {
 
       colors: {
         oliveLight: "#576665",
+        gray: "#ECECEC",
       },
     },
   },
